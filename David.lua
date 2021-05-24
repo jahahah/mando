@@ -8051,7 +8051,7 @@ Dev_Rio(msg.chat_id_, msg.id_, 1, '⌁︙تم الغاء امر الزخرفه',
 DevRio:del(David..'Zrf:Rio'..msg.chat_id_..''..msg.sender_user_id_)
 return false  
 end 
-UrlZrf = https.request('https://apiabs.ml/zrf.php?Rio='..URL.escape(text)) 
+UrlZrf = https.request('https://apiabs.ml/zrf.php?Abs='..URL.escape(text)) 
 Zrf = JSON.decode(UrlZrf) 
 t = "⌁︙قائمة الزخرفه ↫ ⤈\n﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎\n"
 i = 0
@@ -8072,7 +8072,7 @@ end
 if not DevRio:get(David..'Rio:Zrf:Rio'..msg.chat_id_) then
 if text and text:match("^زخرفه (.*)$") and ChCheck(msg) or text and text:match("^زخرف (.*)$") and ChCheck(msg) then 
 local TextZrf = text:match("^زخرفه (.*)$") or text:match("^زخرف (.*)$") 
-UrlZrf = https.request('https://apiabs.ml/zrf.php?Rio='..URL.escape(TextZrf)) 
+UrlZrf = https.request('https://apiabs.ml/zrf.php?Abs='..URL.escape(TextZrf)) 
 Zrf = JSON.decode(UrlZrf) 
 t = "⌁︙قائمة الزخرفه ↫ ⤈\n﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎\n"
 i = 0
@@ -8233,7 +8233,7 @@ end
 if not DevRio:get(David..'Rio:Mean:Rio'..msg.chat_id_) then
 if text and text:match("^معنى الاسم (.*)$") and ChCheck(msg) or text and text:match("^معنى اسم (.*)$") and ChCheck(msg) then 
 local TextMean = text:match("^معنى الاسم (.*)$") or text:match("^معنى اسم (.*)$") 
-UrlMean = https.request('https://apiabs.ml/Mean.php?Rio='..URL.escape(TextMean)) 
+UrlMean = https.request('https://apiabs.ml/Mean.php?Abs='..URL.escape(TextMean)) 
 Mean = JSON.decode(UrlMean) 
 t = Mean.ok.Rio
 Dev_Rio(msg.chat_id_, msg.id_, 1, t, 1, 'html')
