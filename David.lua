@@ -6014,7 +6014,7 @@ end
 --     Source David     --
 if text == "المميزين عام" and ChCheck(msg) or text == "المميزين العامين" and ChCheck(msg) then 
 local List = DevRio:smembers(David..'Rio:VipAll:')
-text = "⌁︙قائمة المميزين العام ↫ ⤈ \n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\n"
+text = "⌁︙قائمة الم��يزين العام ↫ ⤈ \n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\n"
 for k,v in pairs(List) do
 local username = DevRio:get(David..'Save:UserName'..v)
 if username then
@@ -7992,7 +7992,7 @@ local TXTE = "⌁︙اعدادات المجموعه ↫ ⤈\n┉ ≈ ┉ ≈ ┉
 .."⌁︙التكرار ↫ "..flood.."\n"
 .."⌁︙عدد التكرار ↫ "..Flood_Num.."\n"
 .."⌁︙عدد السبام ↫ "..spam_c.."\n"
-.."┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\n⌁︙
+.."┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\n⌁︙".."\n"
 [Source Channel](https://t.me/L9L9L)\n"
 Dev_Rio(msg.chat_id_, msg.id_, 1, TXTE, 1, 'md')
 end
@@ -9508,7 +9508,7 @@ local text =  [[
 ⌁︙المنظفين • حذف المنظفين
 ⌁︙رفع مدير • تنزيل مدير
 ⌁︙المدراء • حذف المدراء
-⌁︙تفعيل • تعطيل + الامر ↫ ⤈
+⌁︙تفعيل • تعطيل + الا��ر ↫ ⤈
 ⌁︙نزلني • امسح
 ⌁︙الحظر • الكتم
 ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
