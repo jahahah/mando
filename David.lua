@@ -8026,6 +8026,7 @@ end
 if text and text:match("^كول (.*)$") then
 local txt = {string.match(text, "^(كول) (.*)$")}
 Dev_Rio(msg.chat_id_,0, 1, txt[2], 1, 'md')
+send(msg.chat_id_,{[0] = msg.id_})
 end
 if text and text:match("^انطق (.*)$") then
 local UrlAntk = https.request('https://apiabs.ml/Antk.php?abs='..URL.escape(text:match("^انطق (.*)$")))
