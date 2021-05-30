@@ -8023,7 +8023,6 @@ Dev_Rio(msg.chat_id_, msg.id_, 1, TXTE, 1, 'md')
 end
 end
 --     Source David     --
---     Source DevProx     --
 if text and text:match("^كول (.*)$") then
 local txt = {string.match(text, "^(كول) (.*)$")}
 Dev_Rio(msg.chat_id_,0, 1, txt[2], 1, 'md')
@@ -8152,8 +8151,8 @@ local DavidTeam = '⌁︙اهلا عزيزي ↫ '..RioRank(msg)..' \n⌁︙تم
 Riomoned(msg.chat_id_, msg.sender_user_id_, msg.id_, DavidTeam, 14, string.len(msg.sender_user_id_))
 DevRio:del(David..'Rio:movie_bot'..msg.chat_id_)  
 end
-if not DevRio:get(David..'Rio:movie_bot'..msg.chat_id_) then
-if text and text:match("^فلم (.*)$") and DevRio:get(David.."Rio:movie_bot"..msg.chat_id_) then
+if not DevRio:get(David..'Rio:movie:Rio'..msg.chat_id_) then
+if text and text:match("^فلم (.*)$") and DevRio:get(David.."Rio:movie:Rio"..msg.chat_id_) then
 local Textm = text:match("^فلم (.*)$")
 Urlm = https.request('https://black-source.tk/BlackTeAM/movie.php?serch='..URL.escape(Textm)) 
 if res == 200 then
@@ -8182,7 +8181,7 @@ local DavidTeam = '⌁︙اهلا عزيزي ↫ '..RioRank(msg)..' \n⌁︙تم
 Riomoned(msg.chat_id_, msg.sender_user_id_, msg.id_, DavidTeam, 14, string.len(msg.sender_user_id_))
 DevRio:set(David..'Rio:insta_bot'..msg.chat_id_,true)
 end
-if text and text:match("^معلومات (.*)$") and DevRio:get(David.."Rio:insta_bot"..msg.chat_id_) then
+if text and text:match("^معلومات (.*)$") and DevRio:get(David.."Rio:insta:Rio"..msg.chat_id_) then
 local Textni = text:match("^معلومات (.*)$")
 data,res = https.request('https://black-source.tk/BlackTeAM/infoInstagram.php?username='..URL.escape(Textni)..'')
 if res == 200 then
